@@ -70,6 +70,10 @@ function generatePassword(lower, upper, number, symbol, length) {
 		return "";
 	}
 
+	if (length > 20) {
+		return alert("Introduce una longitud de máximo 20");
+	}
+
 	for (let i = 0; i < length; i += typesCount) {
 		typesArr.forEach((type) => {
 			const funcName = Object.keys(type)[0];
